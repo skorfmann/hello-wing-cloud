@@ -7,7 +7,7 @@ let queue = new cloud.Queue();
 
 queue.setConsumer(inflight (message) => {
   bucket.put("wing.txt", "Hello, ${message}");
-}, timeout: 30s);
+}, timeout: 15s);
 
 test "Hello, world!" {
   queue.push("world!");
